@@ -26,7 +26,6 @@ const Hero = () => {
                 />
             </div>
 
-
             <div className="lg:w-1/2 px-10 flex flex-col mx-auto items-center ">
                 <motion.h1
                     variants={container(0)}

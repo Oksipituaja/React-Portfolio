@@ -1,6 +1,5 @@
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
-// import { FaYoutube } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { motion } from "motion/react";
 

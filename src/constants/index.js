@@ -4,6 +4,6 @@ export const ABOUT_TEXT = `Saya memiliki rasa ingin tahu yang besar dan selalu b
 
 export const CONTACT = {
   address: "Jl. KH Achmad Fauzan No.17, Krasak, Bangsri, Kec. Bangsri, Kabupaten Jepara, Jawa Tengah 59415",
-  phoneNo: "+62 8967 4962 224 ", //https://api.whatsapp.com/send/?phone=089674962244&text&type=phone_number&app_absent=0
+  phoneNo: "+62 8967 4962 224 ",
   email: "oksipituaja@gmail.com",
 };

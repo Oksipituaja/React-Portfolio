@@ -9,13 +9,13 @@ const UIUXDesigner = () => {
     {
       title: "UI/UX Design for RaffStore Online Electronics Store",
       description: "Here's a look at the UI/UX design for the landing page of RaffStore, an online electronics store. This project aims to enhance user engagement and drive conversions through a clean, modern, and user-centered design, carefully considering the optimal user flow and effective presentation of product information. Made using Figma.",
-      image: "/src/assets/Projects/Raffstore-UI.png",
+      image: "/src/assets/Raffstore-UI.png",
       liveUrl: "https://www.behance.net/gallery/224308023/UI-Design-for-RaffStore-Online-Electronics-Store",
     },
     {
       title: "Redesigning the Steam Dashboard",
       description: "Just tried my hand at redesigning the Steam dashboard with a modern dark UI. Focused on a sleek, user-friendly experience while keeping the gaming vibe intact. Let me know what you think! ",
-      image: "/src/assets/Projects/Redesign-Dashboard.png",
+      image: "/src/assets/Redesign-Dashboard.png",
       liveUrl: "https://www.behance.net/gallery/221539787/Redesign-Steam-Dashboard",
     },
 

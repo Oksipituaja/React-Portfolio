@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import UiUxDesign from "../assets/Projects/UI-UX-Design.jpg";
-import FrontendDev from "../assets/Projects/Frontend-Dev.jpeg";
-import GraphicDesign from "../assets/Projects/GraphicDesign.jpeg";
+import UiUxDesign from "../assets/UI-UX-Design.jpg";
+import FrontendDev from "../assets/Frontend-Dev.jpeg";
+import GraphicDesign from "../assets/GraphicDesign.jpeg";
 
 const Work = () => {
   const navigate = useNavigate();

@@ -1,11 +1,10 @@
 import { ABOUT_TEXT } from "../constants";
-//import cvFile from "../assets/CV_YusufHammam.pdf";
 import aboutImg from "../assets/about.png";
 import { motion } from "framer-motion";
-import { FaDownload } from "react-icons/fa"; // Import ikon download
+import { FaDownload } from "react-icons/fa";
 
 const About = () => {
-  const cvPath = "/assets/CV_Yusuf_Hammam.pdf"; // Ganti dengan path CV Anda
+  const cvPath = "/assets/CV_Yusuf_Hammam.pdf";
 
   return (
     <div className="border-b border-neutral-900 pb-12">
