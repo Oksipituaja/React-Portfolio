@@ -19,7 +19,6 @@ const UIUXDesigner = () => {
       liveUrl: "https://www.behance.net/gallery/221539787/Redesign-Steam-Dashboard",
     },
 
-    // ... tambahkan proyek-proyek Anda lainnya di sini
   ];
 
   return (
