@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { FaDownload } from "react-icons/fa";
 
 const About = () => {
-  const cvPath = "/assets/CV_Yusuf_Hammam.pdf";
+  const cvPath = "/assets/Projects/CV_YUSUF_HAMMAM.pdf";
 
   return (
     <div className="border-b border-neutral-900 pb-12">

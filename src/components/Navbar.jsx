@@ -12,7 +12,7 @@ const Navbar = () => {
                 transition={{ duration: 1 }}
                 className="flex flex-shrink-0 items-center"
             >
-                <div className="mx-2 text-xl font-bold text-teal-300 grayscale hover:grayscale-0 transition-all duration-500">Oksipituaja</div>
+                <div className="mx-2 text-xl font-bold text-sky-400 grayscale hover:grayscale-0 transition-all duration-500">Oksipituaja</div>
             </motion.div>
             <motion.div
                 initial={{ x: 95, opacity: 0 }}
