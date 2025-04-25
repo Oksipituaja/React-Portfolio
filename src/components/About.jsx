@@ -2,7 +2,7 @@ import { ABOUT_TEXT } from "../constants";
 import aboutImg from "../assets/about.png";
 import { motion } from "framer-motion";
 import { FaDownload } from "react-icons/fa";
-import CVpdf from "../assets/CV_YUSUF_HAMMAM.pdf";
+
 
 const About = () => {
   return (
@@ -38,7 +38,7 @@ const About = () => {
           </div>
           <div className="flex justify-center lg:justify-start mt-8">
             <motion.a
-              href={CVpdf}
+              href="https://your-vercel-app.com/assets/CV_YUSUF_HAMMAM.pdf" // Ganti dengan URL sebenarnya
               download="CV_YUSUF_HAMMAM.pdf"
               className="bg-cyan-500 hover:bg-cyan-700 text-white font-bold py-3 px-6 rounded-full flex items-center gap-2 shadow-md transition-colors duration-300"
             >
