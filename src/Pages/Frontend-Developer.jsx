@@ -1,11 +1,10 @@
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
-import todoListAppPrev from './src/assets/Projects/ToDoListApp-Prev.png';
-import calculatorJsPrev from './src/assets/Projects/Calculatorjs-prev.png';
-import pawsAdvisorPrev from './src/assets/Projects/PawsAdvisor-Prev.png';
-import preview from './src/assets/Projects/Preview.png';
-
+import todoListAppPrev from '../assets/Projects/ToDoListApp-Prev.png';
+import calculatorJsPrev from '../assets/Projects/Calculatorjs-prev.png';
+import pawsAdvisorPrev from '../assets/Projects/PawsAdvisor-Prev.png';
+import preview from '../assets/Projects/Preview.png';
 // Data project
 const projects = [
   {
