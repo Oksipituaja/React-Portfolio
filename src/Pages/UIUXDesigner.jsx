@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-
+import RaffstoreUi from "../assets/Projects/Raffstore-E-Commerce.png"
+import RedesignSteamDashboard from "../assets/Projects/Redesign-dashboard.png"
 const UIUXDesigner = () => {
   const [selectedProject, setSelectedProject] = useState(null);
   const navigate = useNavigate();
@@ -9,13 +10,13 @@ const UIUXDesigner = () => {
     {
       title: "UI/UX Design for RaffStore Online Electronics Store",
       description: "Here's a look at the UI/UX design for the landing page of RaffStore, an online electronics store. This project aims to enhance user engagement and drive conversions through a clean, modern, and user-centered design, carefully considering the optimal user flow and effective presentation of product information. Made using Figma.",
-      image: "/src/assets/Projects/Raffstore-E-Commerce.png",
+      image: RaffstoreUi,
       liveUrl: "https://www.behance.net/gallery/224397111/UI-Design-E-Commerce-Landing-Page-RaffStore",
     },
     {
       title: "Redesigning the Steam Dashboard",
       description: "Just tried my hand at redesigning the Steam dashboard with a modern dark UI. Focused on a sleek, user-friendly experience while keeping the gaming vibe intact. Let me know what you think! ",
-      image: "/src/assets/Projects/Redesign-Dashboard.png",
+      image: RedesignSteamDashboard,
       liveUrl: "https://www.behance.net/gallery/221539787/Redesign-Steam-Dashboard",
     },
 
