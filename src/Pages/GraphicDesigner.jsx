@@ -1,32 +1,35 @@
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
-
+import AeroStreetHoops from "../assets/Projects/Aerostreet-Hoops.png";
+import DynamicShoesCampaign from "../assets/Projects/Shoes-Design-Graphic.png";
+import HeadphonesDesignGraphic from "../assets/Projects/Headphones-Design-Graphic.png";
+import AppleMinimalism from "../assets/Projects/Sosial-Media-Apple.png";
 
 // Data project
 const projects = [
   {
     title: "Bold, Modern, and Dynamic A Shoes Campaign Concept🔥",
     description: "Exploring a bold and modern design approach with dynamic elements and strong typography. This project showcases various poster designs and social media visuals. Expect to see vibrant colors and impactful layouts.",
-    image: "/src/assets/Projects/Shoes-Design-Graphic.png",
+    image: DynamicShoesCampaign,
     liveUrl: "https://www.behance.net/gallery/221772161/Bold-Modern-and-Dynamic-A-Shoes-Campaign-Concept",
   },
   {
     title: "Minimalism in Product Advertising: A Concept Poster for Aerostreet Hoops",
     description: "A personal exploration of minimalist design principles applied to product advertising, using the Aerostreet Hoops as a subject. This concept focuses on visual hierarchy and impactful simplicity, allowing the product to take center stage with minimal distractions.",
-    image: "/src/assets/Projects/Aerostreet-Hoops.png",
+    image: AeroStreetHoops,
     liveUrl: "https://www.behance.net/gallery/223782617/Exploring-Visual-Hierarchy-Aerostreet-Hoops-Poster",
   },
   {
     title: "Designing Sound, Visually",
     description: "An exploration of visually representing sound through abstract layouts and dynamic compositions. This project experimented with different ways to translate auditory experiences into visual forms, focusing on rhythm and flow.",
-    image: "/src/assets/Projects/Headphones-Design-Graphic.png",
+    image: HeadphonesDesignGraphic,
     liveUrl: "https://www.behance.net/gallery/221946235/Designing-Sound-Visually-",
   },
   {
     title: "Crimson Elegance: Exploring the Beauty of an Apple",
     description: "Delving into the world of the apple, this series aims to highlight its natural perfection and the artistry found in its simple form. From the rich crimson hues to the subtle water droplets, every detail tells a story of nature's exquisite design.",
-    image: "/src/assets/Projects/Sosial-Media-Apple.png",
+    image: AppleMinimalism,
     liveUrl: "https://www.behance.net/gallery/223797269/Crimson-Elegance-Exploring-the-Beauty-of-an-Apple",
   },
 ];
