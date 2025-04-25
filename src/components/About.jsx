@@ -2,9 +2,10 @@ import { ABOUT_TEXT } from "../constants";
 import aboutImg from "../assets/about.png";
 import { motion } from "framer-motion";
 import { FaDownload } from "react-icons/fa";
+import CVpdf from "../assets/CV_YUSUF_HAMMAM.pdf";
 
 const About = () => {
-const cvPath = "/src/assets/CV_Yusuf_Hammam.pdf";
+// const cvPath = "/src/assets";
 
   return (
     <div className="border-b border-neutral-900 pb-12">
@@ -39,8 +40,8 @@ const cvPath = "/src/assets/CV_Yusuf_Hammam.pdf";
           </div>
           <div className="flex justify-center lg:justify-start mt-8">
             <motion.a
-              href={cvPath}
-              download="/src/assets/CV_YUSUF_HAMMAM.pdf"
+              href={CVpdf}
+              download={CVpdf}
               className="bg-cyan-500 hover:bg-cyan-700 text-white font-bold py-3 px-6 rounded-full flex items-center gap-2 shadow-md transition-colors duration-300"
             >
               <FaDownload className="h-5 w-5" /> Download CV
