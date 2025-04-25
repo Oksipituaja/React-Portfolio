@@ -1,7 +1,6 @@
 import { ABOUT_TEXT } from "../constants";
 import aboutImg from "../assets/about.png";
 import { motion } from "framer-motion";
-//import { FaDownload } from "react-icons/fa";
 
 const About = () => {
   return (
