@@ -104,7 +104,7 @@ const GraphicDesigner = () => {
             </h2>
             <p className="text-lg text-gray-400">
               Kumpulan proyek terbaru yang saya kerjakan <br />
-              dalam bidang Frontend Developer.
+              dalam bidang Graphic Designer.
             </p>
           </div>
 
