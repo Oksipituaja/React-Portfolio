@@ -1,7 +1,10 @@
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
-
+import todoListAppPrev from './src/assets/Projects/ToDoListApp-Prev.png';
+import calculatorJsPrev from './src/assets/Projects/Calculatorjs-prev.png';
+import pawsAdvisorPrev from './src/assets/Projects/PawsAdvisor-Prev.png';
+import preview from './src/assets/Projects/Preview.png';
 
 // Data project
 const projects = [
@@ -9,26 +12,26 @@ const projects = [
     title: "To Do List App",
     description:
       "Aplikasi web untuk mengelola tugas harian dengan antarmuka yang intuitif dan user-friendly. Dibangun menggunakan React dan Tailwind CSS.",
-    image: "./src/assets/Projects/ToDoListApp-Prev.png",
+    image: todoListAppPrev,
     href: "https://todolist-app-yusufhammam.vercel.app/"
   },
   {
     title: "Calculator App",
     description:
       "Sebuah proyek kalkulator web yang dibuat dengan HTML untuk struktur, CSS untuk styling minimalis, dan JavaScript untuk menangani operasi perhitungan.",
-    image: "./src/assets/Projects/Calculatorjs-prev.png",
+    image: calculatorJsPrev,
     href: "https://oksipituaja.github.io/Calculator-App-HTML-CSS-JS-/"
   },
   {
     title: "Paws Advisor Web",
     description: "Website statis responsif untuk informasi perawatan hewan peliharaan, dibangun dengan HTML, Tailwind CSS, dan JavaScript.",
-    image: "./src/assets/Projects/PawsAdvisor-Prev.png",
+    image: pawsAdvisorPrev,
     href: "https://oksipituaja.github.io/Paws-Advisor-Web/"
   },
   {
     title: "Akmal Funiture",
     description: "Coming Soon",
-    image: "./src/assets/Projects/Preview.png",
+    image: preview,
     href: ""
   }
 ];
