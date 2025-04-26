@@ -9,7 +9,6 @@ import AppleMinimalism from "../assets/Projects/Sosial-Media-Apple.png";
 
 const GraphicDesigner = () => {
   const [selectedProject, setSelectedProject] = useState(null);
-  const [isZoomClicked, setIsZoomClicked] = useState(false);
   const navigate = useNavigate();
 
   const projects = [
@@ -35,8 +34,7 @@ const GraphicDesigner = () => {
       description:
         "An exploration of visually representing sound through abstract layouts and dynamic compositions. This project experimented with different ways to translate auditory experiences into visual forms, focusing on rhythm and flow.",
       image: HeadphonesDesignGraphic,
-      liveUrl:
-        "https://www.behance.net/gallery/221946235/Designing-Sound-Visually-",
+      liveUrl:"https://www.behance.net/gallery/221946235/Designing-Sound-Visually-",
     },
     {
       title: "Crimson Elegance: Exploring the Beauty of an Apple",
@@ -65,7 +63,7 @@ const GraphicDesigner = () => {
             transition={{ duration: 1 }}
             className="flex items-center"
           >
-            <div className="mx-2 text-xl font-bold text-teal-300 grayscale hover:grayscale-0 transition-all duration-500">
+            <div className="mx-2 text-xl font-bold text-sky-400 grayscale hover:grayscale-0 transition-all duration-500">
               Oksipituaja
             </div>
           </motion.div>
@@ -125,13 +123,19 @@ const GraphicDesigner = () => {
                 className="cursor-pointer bg-gray-900 rounded-2xl border border-gray-700 hover:shadow-cyan-500/20 transition-shadow flex flex-col"
               >
                 <div className="overflow-hidden rounded-t-2xl relative">
-                  <div className="aspect-w-4 aspect-h-3 md:aspect-w-3 md:aspect-h-2 lg:aspect-w-4 lg:aspect-h-3">
-                    <img
-                      src={project.image}
-                      alt={project.title}
-                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                    />
-                  </div>
+                  {project.image ? (
+                    <div className="aspect-w-4 aspect-h-3 md:aspect-w-3 md:aspect-h-2 lg:aspect-w-4 lg:aspect-h-3">
+                      <img
+                        src={project.image}
+                        alt={project.title}
+                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                      />
+                    </div>
+                  ) : (
+                    <div className="w-full h-60 flex items-center justify-center bg-gray-800 text-gray-500">
+                      Tidak tersedia
+                    </div>
+                  )}
                 </div>
                 <div className="p-5 flex-grow">
                   <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
@@ -140,7 +144,6 @@ const GraphicDesigner = () => {
               </div>
             ))}
           </div>
-
           {/* Popup fullscreen */}
           <AnimatePresence>
             {selectedProject && (
@@ -149,29 +152,29 @@ const GraphicDesigner = () => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
-                onClick={() => {
-                  if (!isZoomClicked) {
-                    setIsZoomClicked(true);
-                  } else {
-                    // Open live URL after zoom
-                    window.open(selectedProject.liveUrl, "_blank");
-                    setSelectedProject(null);  // Close the fullscreen view
-                    setIsZoomClicked(false);   // Reset the zoom state
-                  }
-                }}
+                onClick={() => setSelectedProject(null)}
               >
                 <motion.div
                   className="max-w-5xl w-full mx-auto relative"
                   initial={{ scale: 0.95, opacity: 0 }}
                   animate={{ scale: 1, opacity: 1 }}
                   exit={{ scale: 0.95, opacity: 0 }}
-                  onClick={(e) => e.stopPropagation()} // Prevent clicking inside the content from closing
+                  onClick={(e) => e.stopPropagation()}
                 >
-                  <img
-                    src={selectedProject.image}
-                    alt={selectedProject.title}
-                    className="w-full rounded-xl border border-gray-700 mb-6 cursor-pointer"
-                  />
+                  {selectedProject.image && (
+                    <a
+                      href={selectedProject.liveUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={selectedProject.liveUrl ? "cursor-pointer" : "cursor-default"}
+                    >
+                      <img
+                        src={selectedProject.image}
+                        alt={selectedProject.title}
+                        className="w-full rounded-xl border border-gray-700 mb-6"
+                      />
+                    </a>
+                  )}
                   <div className="text-white">
                     <h2 className="text-2xl md:text-3xl font-semibold mb-2">
                       {selectedProject.title}
@@ -181,10 +184,7 @@ const GraphicDesigner = () => {
                     </p>
                   </div>
                   <button
-                    onClick={() => {
-                      setSelectedProject(null);
-                      setIsZoomClicked(false);
-                    }}
+                    onClick={() => setSelectedProject(null)}
                     className="absolute top-4 right-4 text-white text-3xl hover:text-cyan-400"
                   >
                     ×
@@ -193,6 +193,7 @@ const GraphicDesigner = () => {
               </motion.div>
             )}
           </AnimatePresence>
+
 
           {/* Tombol kembali */}
           <div className="text-center mt-16">

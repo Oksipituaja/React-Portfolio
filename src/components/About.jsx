@@ -40,7 +40,7 @@ const About = () => {
 
           <div className="mt-4">
             <a
-              href="https://portfolio-yusuf-hammam.vercel.app/CV_YUSUF_HAMMAM.pdf"
+              href="https://yusuf-hammam-portfolio.vercel.app/CV_YUSUF_HAMMAM.pdf"
               download
               className="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg shadow-md transition duration-300"
             >
