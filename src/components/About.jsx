@@ -1,7 +1,7 @@
 import { ABOUT_TEXT } from "../constants";
 import aboutImg from "../assets/about.png";
 import { motion } from "framer-motion";
-//import { FaDownload } from "react-icons/fa";
+// import { FaDownload } from "react-icons/fa"; // (Boleh aktifin kalau mau pakai icon download)
 
 const About = () => {
   return (
@@ -33,8 +33,21 @@ const About = () => {
           className="w-full lg:w-1/2 mt-8 lg:mt-0 flex flex-col items-center lg:items-start justify-center"
         >
           <div className="flex justify-center lg:justify-start">
-            <p className="my-2 max-w-xl py-6 text-lg text-neutral-400 mt-[-1rem]">{ABOUT_TEXT}</p>
+            <p className="my-2 max-w-xl py-6 text-lg text-neutral-400 mt-[-1rem]">
+              {ABOUT_TEXT}
+            </p>
           </div>
+
+          <div className="mt-4">
+            <a
+              href="https://portfolio-yusuf-hammam.vercel.app/CV_YUSUF_HAMMAM.pdf"
+              download
+              className="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg shadow-md transition duration-300"
+            >
+              Download CV
+            </a>
+          </div>
+
         </motion.div>
       </div>
     </div>
