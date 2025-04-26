@@ -1,43 +1,52 @@
-import { useNavigate } from "react-router-dom";
-import { motion } from "framer-motion";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 import AeroStreetHoops from "../assets/Projects/Aerostreet-Hoops.png";
 import DynamicShoesCampaign from "../assets/Projects/Shoes-Design-Graphic.png";
 import HeadphonesDesignGraphic from "../assets/Projects/Headphones-Design-Graphic.png";
 import AppleMinimalism from "../assets/Projects/Sosial-Media-Apple.png";
 
-// Data project
-const projects = [
-  {
-    title: "Bold, Modern, and Dynamic A Shoes Campaign Concept🔥",
-    description: "Exploring a bold and modern design approach with dynamic elements and strong typography. This project showcases various poster designs and social media visuals. Expect to see vibrant colors and impactful layouts.",
-    image: DynamicShoesCampaign,
-    liveUrl: "https://www.behance.net/gallery/221772161/Bold-Modern-and-Dynamic-A-Shoes-Campaign-Concept",
-  },
-  {
-    title: "Minimalism in Product Advertising: A Concept Poster for Aerostreet Hoops",
-    description: "A personal exploration of minimalist design principles applied to product advertising, using the Aerostreet Hoops as a subject. This concept focuses on visual hierarchy and impactful simplicity, allowing the product to take center stage with minimal distractions.",
-    image: AeroStreetHoops,
-    liveUrl: "https://www.behance.net/gallery/223782617/Exploring-Visual-Hierarchy-Aerostreet-Hoops-Poster",
-  },
-  {
-    title: "Designing Sound, Visually",
-    description: "An exploration of visually representing sound through abstract layouts and dynamic compositions. This project experimented with different ways to translate auditory experiences into visual forms, focusing on rhythm and flow.",
-    image: HeadphonesDesignGraphic,
-    liveUrl: "https://www.behance.net/gallery/221946235/Designing-Sound-Visually-",
-  },
-  {
-    title: "Crimson Elegance: Exploring the Beauty of an Apple",
-    description: "Delving into the world of the apple, this series aims to highlight its natural perfection and the artistry found in its simple form. From the rich crimson hues to the subtle water droplets, every detail tells a story of nature's exquisite design.",
-    image: AppleMinimalism,
-    liveUrl: "https://www.behance.net/gallery/223797269/Crimson-Elegance-Exploring-the-Beauty-of-an-Apple",
-  },
-];
-
-
 const GraphicDesigner = () => {
+  const [selectedProject, setSelectedProject] = useState(null);
+  const [isZoomClicked, setIsZoomClicked] = useState(false);
   const navigate = useNavigate();
 
+  const projects = [
+    {
+      title: "Bold, Modern, and Dynamic A Shoes Campaign Concept🔥",
+      description:
+        "Exploring a bold and modern design approach with dynamic elements and strong typography. This project showcases various poster designs and social media visuals. Expect to see vibrant colors and impactful layouts.",
+      image: DynamicShoesCampaign,
+      liveUrl:
+        "https://www.behance.net/gallery/221772161/Bold-Modern-and-Dynamic-A-Shoes-Campaign-Concept",
+    },
+    {
+      title:
+        "Minimalism in Product Advertising: A Concept Poster for Aerostreet Hoops",
+      description:
+        "A personal exploration of minimalist design principles applied to product advertising, using the Aerostreet Hoops as a subject. This concept focuses on visual hierarchy and impactful simplicity, allowing the product to take center stage with minimal distractions.",
+      image: AeroStreetHoops,
+      liveUrl:
+        "https://www.behance.net/gallery/223782617/Exploring-Visual-Hierarchy-Aerostreet-Hoops-Poster",
+    },
+    {
+      title: "Designing Sound, Visually",
+      description:
+        "An exploration of visually representing sound through abstract layouts and dynamic compositions. This project experimented with different ways to translate auditory experiences into visual forms, focusing on rhythm and flow.",
+      image: HeadphonesDesignGraphic,
+      liveUrl:
+        "https://www.behance.net/gallery/221946235/Designing-Sound-Visually-",
+    },
+    {
+      title: "Crimson Elegance: Exploring the Beauty of an Apple",
+      description:
+        "Delving into the world of the apple, this series aims to highlight its natural perfection and the artistry found in its simple form. From the rich crimson hues to the subtle water droplets, every detail tells a story of nature's exquisite design.",
+      image: AppleMinimalism,
+      liveUrl:
+        "https://www.behance.net/gallery/223797269/Crimson-Elegance-Exploring-the-Beauty-of-an-Apple",
+    },
+  ];
 
   return (
     <div className="overflow-x-hidden text-neutral-300 antialiased selection:bg-cyan-300 selection:text-cyan-900">
@@ -45,7 +54,6 @@ const GraphicDesigner = () => {
       <div className="fixed top-0 -z-10 h-full w-full">
         <div className="absolute top-0 z-[-2] h-screen w-screen bg-neutral-950 [background:radial-gradient(145%_145%_at_50%_10%,#000_55%,#22d3ee_100%)]"></div>
       </div>
-
 
       {/* Kontainer Utama */}
       <div className="container mx-auto px-8">
@@ -57,7 +65,9 @@ const GraphicDesigner = () => {
             transition={{ duration: 1 }}
             className="flex items-center"
           >
-            <div className="mx-2 text-xl font-bold text-teal-300 grayscale hover:grayscale-0 transition-all duration-500">Oksipituaja</div>
+            <div className="mx-2 text-xl font-bold text-teal-300 grayscale hover:grayscale-0 transition-all duration-500">
+              Oksipituaja
+            </div>
           </motion.div>
           <motion.div
             initial={{ x: 95, opacity: 0 }}
@@ -92,7 +102,6 @@ const GraphicDesigner = () => {
           </motion.div>
         </nav>
 
-
         {/* Portfolio Section */}
         <section className="pt-12 pb-20">
           <div className="max-w-xl mx-auto text-center mb-20">
@@ -100,41 +109,92 @@ const GraphicDesigner = () => {
               Portfolio
             </h4>
             <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
-              Project Terbaru
+              Graphic Design Projects
             </h2>
             <p className="text-lg text-gray-400">
-              Kumpulan proyek terbaru yang saya kerjakan <br />
-              dalam bidang Graphic Designer.
+              Koleksi karya desain grafis terbaru yang saya buat. Klik gambar untuk melihat detail.
             </p>
           </div>
 
-
-          <div className="flex flex-wrap justify-center gap-8">
-            {projects.map((item, index) => (
-              <a
-                key={index}
-                href={item.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full md:w-[48%] lg:w-[30%] bg-gray-900 rounded-2xl shadow-md hover:shadow-cyan-500/20 transition-shadow duration-300 cursor-pointer"
+          {/* Grid Project */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {projects.map((project, i) => (
+              <div
+                key={i}
+                onClick={() => setSelectedProject(project)}
+                className="cursor-pointer bg-gray-900 rounded-2xl border border-gray-700 hover:shadow-cyan-500/20 transition-shadow flex flex-col"
               >
                 <div className="overflow-hidden rounded-t-2xl relative">
-                  <img
-                    className="w-full h-auto object-cover hover:scale-105 transition-transform duration-300"
-                    src={item.image}
-                    alt={item.title}
-                    style={{ aspectRatio: 'auto' }} // Biarkan aspect ratio gambar asli
-                  />
+                  <div className="aspect-w-4 aspect-h-3 md:aspect-w-3 md:aspect-h-2 lg:aspect-w-4 lg:aspect-h-3">
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
                 </div>
-                <div className="p-5">
-                  <h3 className="text-xl font-semibold text-white mb-2">{item.title}</h3>
-                  <p className="text-sm text-gray-400">{item.description}</p>
+                <div className="p-5 flex-grow">
+                  <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
+                  <p className="text-sm text-gray-400">{project.description}</p>
                 </div>
-              </a>
+              </div>
             ))}
           </div>
 
+          {/* Popup fullscreen */}
+          <AnimatePresence>
+            {selectedProject && (
+              <motion.div
+                className="fixed inset-0 bg-black/90 z-50 overflow-y-auto p-6 md:p-10"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                onClick={() => {
+                  if (!isZoomClicked) {
+                    setIsZoomClicked(true);
+                  } else {
+                    // Open live URL after zoom
+                    window.open(selectedProject.liveUrl, "_blank");
+                    setSelectedProject(null);  // Close the fullscreen view
+                    setIsZoomClicked(false);   // Reset the zoom state
+                  }
+                }}
+              >
+                <motion.div
+                  className="max-w-5xl w-full mx-auto relative"
+                  initial={{ scale: 0.95, opacity: 0 }}
+                  animate={{ scale: 1, opacity: 1 }}
+                  exit={{ scale: 0.95, opacity: 0 }}
+                  onClick={(e) => e.stopPropagation()} // Prevent clicking inside the content from closing
+                >
+                  <img
+                    src={selectedProject.image}
+                    alt={selectedProject.title}
+                    className="w-full rounded-xl border border-gray-700 mb-6 cursor-pointer"
+                  />
+                  <div className="text-white">
+                    <h2 className="text-2xl md:text-3xl font-semibold mb-2">
+                      {selectedProject.title}
+                    </h2>
+                    <p className="text-gray-400 mb-6 text-sm md:text-base">
+                      {selectedProject.description}
+                    </p>
+                  </div>
+                  <button
+                    onClick={() => {
+                      setSelectedProject(null);
+                      setIsZoomClicked(false);
+                    }}
+                    className="absolute top-4 right-4 text-white text-3xl hover:text-cyan-400"
+                  >
+                    ×
+                  </button>
+                </motion.div>
+              </motion.div>
+            )}
+          </AnimatePresence>
 
+          {/* Tombol kembali */}
           <div className="text-center mt-16">
             <button
               onClick={() => navigate("/")}
@@ -149,6 +209,4 @@ const GraphicDesigner = () => {
   );
 };
 
-
 export default GraphicDesigner;
-
