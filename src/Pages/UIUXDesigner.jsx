@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import RaffstoreUi from "../assets/Projects/Raffstore-E-Commerce.png";
+import Preview from "../assets/Projects/Preview.png";
 import RedesignSteamDashboard from "../assets/Projects/Redesign-dashboard.png";
 
 const UIUXDesigner = () => {
@@ -20,6 +21,12 @@ const UIUXDesigner = () => {
       description: "Just tried my hand at redesigning the Steam dashboard with a modern dark UI. Focused on a sleek, user-friendly experience while keeping the gaming vibe intact. Let me know what you think!",
       image: RedesignSteamDashboard,
       liveUrl: "https://www.behance.net/gallery/221539787/Redesign-Steam-Dashboard",
+    },
+    {
+      title: "Kebunku Mobile App",
+      description: "Just tried my hand at making the Kebunku Landing page Mobile app. Focused on user-friendly experience. Project On Going.",
+      image: Preview,
+      liveUrl: "",
     },
   ];
 
