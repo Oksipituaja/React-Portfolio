@@ -15,7 +15,7 @@ const container = (delay) => ({
 const Hero = () => {
     return (
         <div className="container mx-auto flex justify-center flex-wrap border-b border-neutral-900 pb-4 space-y-8 lg:mb-35">
-            <div className="lg:w-1/2 justify-center flex mx-auto -py-10">
+            <div className="lg:w-1/2 justify-center flex mx-auto -py-2 h-[480px]">
                 <motion.img
                     initial={{ x: 95, opacity: 0 }}
                     animate={{ x: 0, opacity: 1 }}
@@ -31,7 +31,7 @@ const Hero = () => {
                     variants={container(0)}
                     initial="hidden"
                     animate="visible"
-                    className="pb-16 text-6xl font-extralight tracking-tight lg:mt-16 lg:text-8xl "> Yusuf Hammam
+                    className="pb-8 text-6xl font-extralight lg:-mt-3 tracking-tight lg:text-7xl "> Yusuf Hammam
                 </motion.h1>
                 <motion.h2
                     variants={container(0.5)}

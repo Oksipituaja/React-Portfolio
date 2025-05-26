@@ -38,7 +38,7 @@ const About = () => {
             </p>
           </div>
 
-          <div className="mt-4">
+          <div className="mt-4 space-x-4">
             <a
               href="https://yusuf-hammam-portfolio.vercel.app/CV_YUSUF_HAMMAM.pdf"
               download
@@ -46,7 +46,9 @@ const About = () => {
             >
               Download CV
             </a>
+            
           </div>
+
 
         </motion.div>
       </div>

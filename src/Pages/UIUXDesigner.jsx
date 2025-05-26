@@ -109,7 +109,7 @@ const UIUXDesigner = () => {
                       <img
                         src={project.image}
                         alt={project.title}
-                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                        className="w-full h-80 object-cover hover:scale-105 transition-transform duration-300"
                       />
                     </div>
                   ) : (
@@ -120,7 +120,7 @@ const UIUXDesigner = () => {
                 </div>
                 <div className="p-5 flex-grow">
                   <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-                  <p className="text-sm text-gray-400">{project.description}</p>
+                  <p className="text-sm text-gray-400 max-w-lg">{project.description}</p>
                 </div>
               </div>
             ))}

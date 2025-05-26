@@ -6,6 +6,9 @@ import AeroStreetHoops from "../assets/Projects/Aerostreet-Hoops.png";
 import DynamicShoesCampaign from "../assets/Projects/Shoes-Design-Graphic.png";
 import HeadphonesDesignGraphic from "../assets/Projects/Headphones-Design-Graphic.png";
 import AppleMinimalism from "../assets/Projects/Sosial-Media-Apple.png";
+import IDCARDPMRWIRA from "../assets/Projects/ID-CARD.jpg";
+import pamphletcommemoratingNationalHeroes from "../assets/Projects/FLYER-HARI-PAHLAWAN.jpg";
+import NationalEducationDay from "../assets/Projects/Pendidikan-Nasional.png";
 
 const GraphicDesigner = () => {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -43,6 +46,30 @@ const GraphicDesigner = () => {
       image: AppleMinimalism,
       liveUrl:
         "https://www.behance.net/gallery/223797269/Crimson-Elegance-Exploring-the-Beauty-of-an-Apple",
+    },
+    {
+      title: "pamphlet commemorating National Education Day",
+      description:
+        "Designing a pamphlet commemorating National Education Day, I focused on engaging visuals and easily digestible messages. This project showcases my ability to present complex information into educational and inspiring designs, while celebrating the spirit of education in Indonesia",
+      image: NationalEducationDay,
+      liveUrl:
+        "",
+    },
+    {
+      title: "pamphlet commemorating National Heroes",
+      description:
+        "Designing a pamphlet commemorating National Heroes' Day, I focused on meaningful visuals and uplifting messages. This project showcases my ability to present the values of heroism and the history of struggle through a design that honors, while simultaneously inspiring patriotism in Indonesia.",
+      image: pamphletcommemoratingNationalHeroes,
+      liveUrl:
+        "",
+    },
+    {
+      title: "Guest Reception ID Card Design PMR WIRA SANDYA ADHIMUKTI SMKN 1 Bangsri",
+      description:
+        "My portfolio features an Organizing Committee ID Card design, demonstrating my capability to craft professional and functional visual identities. This ID card was developed for quick recognition and to clearly convey the event/organization's brand, integrating robust branding with critical information in a concise format.",
+      image: IDCARDPMRWIRA,
+      liveUrl:
+        "",
     },
   ];
 
@@ -128,7 +155,7 @@ const GraphicDesigner = () => {
                       <img
                         src={project.image}
                         alt={project.title}
-                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                        className="w-full h-[520px] object-cover hover:scale-105 transition-transform duration-300"
                       />
                     </div>
                   ) : (
@@ -139,7 +166,7 @@ const GraphicDesigner = () => {
                 </div>
                 <div className="p-5 flex-grow">
                   <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-                  <p className="text-sm text-gray-400">{project.description}</p>
+                  <p className="text-sm text-gray-400 max-w-lg">{project.description}</p>
                 </div>
               </div>
             ))}
@@ -185,7 +212,7 @@ const GraphicDesigner = () => {
                   </div>
                   <button
                     onClick={() => setSelectedProject(null)}
-                    className="absolute top-4 right-4 text-white text-3xl hover:text-cyan-400"
+                    className="absolute top-5 right-6 text-red-600 text-5xl hover:text-red-500"
                   >
                     ×
                   </button>
