@@ -15,7 +15,7 @@ const container = (delay) => ({
 const Hero = () => {
     return (
         <div className="container mx-auto flex justify-center flex-wrap border-b border-neutral-900 pb-4 space-y-8 lg:mb-35">
-            <div className="lg:w-1/2 justify-center flex mx-auto -py-2 h-[480px]">
+            <div className="lg:w-1/2 justify-center flex mx-auto -py-2 sm:h-[480px] ">
                 <motion.img
                     initial={{ x: 95, opacity: 0 }}
                     animate={{ x: 0, opacity: 1 }}
