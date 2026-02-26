@@ -1,5 +1,5 @@
 import Hero from "../components/Hero";
-import About from "../components/About";
+// import About from "../components/About";
 import Navbar from "../components/Navbar";
 import Contact from "../components/Contact";
 import Work from "../components/Work";
@@ -15,7 +15,7 @@ const Primary = () => {
       <div className="container mx-auto px-8">
         <Navbar />
         <Hero />
-        <About />
+        {/* <About /> */}
         <Work />
         <Technologies />
         <Contact />

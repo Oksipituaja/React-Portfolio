@@ -1,37 +1,31 @@
-import { FaLinkedin } from "react-icons/fa";
-import { FaGithub } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa";
-import { motion } from "motion/react";
+import React from 'react';
+import { ArrowUpRight } from 'lucide-react';
 
 const Navbar = () => {
-    return (
-        <nav className="mb-20 flex items-center justify-between py-6">
-            <motion.div
-                initial={{ x: -120, opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
-                transition={{ duration: 1 }}
-                className="flex flex-shrink-0 items-center"
-            >
-                <div className="mx-2 text-xl font-bold text-sky-400 grayscale hover:grayscale-0 transition-all duration-500">Oksipituaja</div>
-            </motion.div>
-            <motion.div
-                initial={{ x: 95, opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
-                transition={{ duration: 1 }}
-                className="m-8 flex items-center justify-center gap-4 text-3xl"
-            >
-                <a className="transform hover:scale-150 transition-all duration-500" href="https://www.linkedin.com/in/yusuf-hammam">
-                    <FaLinkedin />
-                </a>
-                <a className="transform hover:scale-150 transition-all duration-500" href="https://github.com/Oksipituaja">
-                    <FaGithub />
-                </a>
-                <a className="transform hover:scale-150 transition-all duration-500" href="https://www.instagram.com/yusuf.hammam">
-                    <FaInstagram />
-                </a>
-            </motion.div>
-        </nav>
-    );
+  return (
+    <nav className="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row justify-between items-center relative z-20 gap-4 md:gap-0">
+      {/* Status Badge */}
+      <div className="flex items-center gap-2 bg-white border border-gray-200 px-4 py-2 rounded-full shadow-sm w-fit">
+        <div className="w-3 h-3 bg-[#10B981] rounded-full"></div>
+        <span className="text-sm font-semibold text-[#1A1F2B]">Available for New Project</span>
+      </div>
+
+      {/* Navigation Links */}
+      <div className="hidden md:flex items-center gap-10 text-[15px] font-medium text-gray-800">
+        <a href="#hero" className="text-slate-100 hover:text-cyan-500 transition-colors">About me</a>
+        <a href="#work" className="text-slate-100 hover:text-cyan-500 transition-colors">Work</a>
+        <a href="#technologies" className="text-slate-100 hover:text-cyan-500 transition-colors">Technologies</a>
+      </div>
+
+      {/* CTA Button */}
+      <a href="#contact">
+      <button className="flex items-center gap-2 bg-[#1A1F2B] text-white px-7 py-3 rounded-full text-sm font-semibold hover:bg-black transition-colors shadow-lg shadow-black/10">
+        Let's Talk
+        <ArrowUpRight size={18} />
+      </button>
+      </a>
+    </nav>
+  );
 };
 
 export default Navbar;

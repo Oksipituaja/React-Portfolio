@@ -1,4 +1,4 @@
-import { ABOUT_TEXT } from "../constants";
+<!-- import { ABOUT_TEXT } from "../constants";
 import aboutImg from "../assets/about.png";
 import { motion } from "framer-motion";
 // import { FaDownload } from "react-icons/fa"; // (Boleh aktifin kalau mau pakai icon download)
@@ -56,4 +56,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default About; -->
