@@ -7,31 +7,33 @@ import { FaGithub } from 'react-icons/fa6';
 const Hero = () => {
   const navigate = useNavigate();
 
-  // Variasi animasi untuk Social Links (Stagger effect)
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.1,
-        delayChildren: 0.4
+        staggerChildren: 0.15,
+        delayChildren: 0.6
       }
     }
   };
 
   const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
-    visible: { y: 0, opacity: 1, transition: { duration: 0.5 } }
+    hidden: { x: 40, opacity: 0 },
+    visible: { 
+      x: 0, 
+      opacity: 1, 
+      transition: { duration: 0.6, ease: "easeOut" }
+    }
   };
 
   return (
     <main className="max-w-7xl mx-auto px-6 pt-10 pb-12 md:pb-24 relative overflow-hidden" id='hero'>
       
-      {/* 1. Judul Utama: Ukuran adaptif (Mobile: 5xl, Desktop: 110px) */}
       <motion.h1 
-        initial={{ y: 20, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
+        initial={{ y: 60, opacity: 0, scale: 0.95 }}
+        animate={{ y: 0, opacity: 1, scale: 1 }}
+        transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
         className="text-center text-5xl md:text-[110px] font-black tracking-tighter text-white leading-tight md:leading-none mt-10 mb-6 md:mb-10 relative z-20"
       >
         YUSUF HAMMAM
@@ -39,11 +41,12 @@ const Hero = () => {
 
       <div className="flex flex-col lg:flex-row items-center justify-between pb-10 border-b border-neutral-800 relative mt-4 md:mt-16 gap-10 md:gap-0">
         
-        {/* 2. Kolom Kiri: Info Card (Tampil urutan ke-2 di mobile) */}
+        {/* Kolom Kiri: geser dari kiri */}
         <motion.div 
-          initial={{ x: -50, opacity: 0 }}
+          initial={{ x: -120, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.7, delay: 0.2 }}
+          transition={{ duration: 0.9, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
+          whileHover={{ y: -4, transition: { duration: 0.3 } }}
           className="w-full md:w-1/3 relative z-20 flex justify-center md:justify-end md:pr-10 order-2 md:order-1"
         >
           <div className="p-0 md:p-8 rounded-[32px] max-w-[340px] text-center md:text-right">
@@ -53,12 +56,12 @@ const Hero = () => {
             </p>
             
             <div className="relative inline-block">
-              {/* Efek Shadow Biru di belakang button */}
               <div className="absolute inset-0 bg-[#0095FF] rounded-xl translate-x-1.5 translate-y-1.5 z-0"></div>
               <a href="#contact">
                 <motion.button 
-                  whileHover={{ scale: 1.05, y: -2 }}
-                  whileTap={{ scale: 0.95 }}
+                  whileHover={{ scale: 1.08, y: -4 }}
+                  whileTap={{ scale: 0.92 }}
+                  transition={{ type: "spring", stiffness: 400, damping: 15 }}
                   className="relative flex items-center gap-2 bg-[#1A1F2B] text-white px-6 py-3.5 rounded-xl text-[15px] font-semibold transition-all z-10 border border-[#1A1F2B]"
                 >
                   Let's Collaborate
@@ -69,15 +72,14 @@ const Hero = () => {
           </div>
         </motion.div>
 
-        {/* 3. Kolom Tengah: Foto & Lingkaran Gradasi (Tampil urutan ke-1 di mobile) */}
+        {/* Kolom Tengah: foto masuk dari bawah, NO bounce/floating */}
         <div className="w-full lg:w-1/3 flex justify-center relative z-10 h-[350px] md:h-[500px] order-1 md:order-2">
           <div className="relative w-full h-full flex justify-center items-end">
             
-            {/* Lingkaran Gradasi - Ukuran Responsive */}
             <motion.div 
-              initial={{ scale: 0.8, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              transition={{ duration: 1, ease: "easeOut" }}
+              initial={{ scale: 0, opacity: 0, rotate: -15 }}
+              animate={{ scale: 1, opacity: 1, rotate: 0 }}
+              transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
               className="absolute 
                 bottom-4 w-[250px] h-[250px] 
                 md:bottom-8 md:w-[380px] md:h-[380px] 
@@ -86,17 +88,14 @@ const Hero = () => {
                 [mask-image:linear-gradient(to_bottom,black_45%,transparent_90%)]"
             />
             
-            {/* Foto Profil dengan Efek Floating & Brightness */}
+            {/* ✅ DIUBAH: hapus repeat/floating, cukup masuk sekali dari bawah */}
             <motion.img 
-              initial={{ y: 80, opacity: 0 }}
+              initial={{ y: 120, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ 
-                y: { duration: 0.8, delay: 0.4 },
-                opacity: { duration: 0.8, delay: 0.4 },
-                repeat: Infinity,
-                repeatType: "mirror",
-                duration: 3,
-                ease: "easeInOut"
+                duration: 1,
+                delay: 0.5,
+                ease: [0.22, 1, 0.36, 1]
               }}
               src="src/assets/YusufProfile2.png" 
               alt="YusufProfile" 
@@ -110,7 +109,7 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* 4. Kolom Kanan: Social Links (Tampil urutan ke-3 di mobile) */}
+        {/* ✅ DIUBAH: Social Links geser dari kanan */}
         <motion.div 
           variants={containerVariants}
           initial="hidden"
@@ -127,8 +126,14 @@ const Hero = () => {
               key={index}
               href={item.link}
               variants={itemVariants}
-              whileHover={{ x: 10, backgroundColor: "rgba(255,255,255,0.1)" }}
-              whileTap={{ scale: 0.95 }}
+              whileHover={{ 
+                x: 14,
+                backgroundColor: "rgba(255,255,255,0.12)",
+                scale: 1.03,
+                boxShadow: "0 0 20px rgba(86,136,255,0.2)"
+              }}
+              whileTap={{ scale: 0.93 }}
+              transition={{ type: "spring", stiffness: 300, damping: 20 }}
               className="flex items-center gap-4 border border-white/20 px-5 py-3 rounded-full min-w-[145px] md:w-[200px] transition-all text-slate-50 text-sm md:text-base"
             >
               {item.icon}

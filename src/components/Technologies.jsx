@@ -3,7 +3,7 @@ import { FaJs } from "react-icons/fa";
 import { motion } from "motion/react";
 import { FaLaravel } from "react-icons/fa6";
 import { PiFigmaLogo } from "react-icons/pi";
-import { SiAdobeillustrator } from "react-icons/si";
+import { SiPhpmyadmin } from "react-icons/si";
 
 const iconVariants = (duration) => ({
     initial: { y: -200 },
@@ -43,7 +43,7 @@ const Technologies = () => {
                     initial="initial"
                     animate="animate"
                     className="rounded-2xl border-4 border-neutral-800 p-4">
-                    <SiAdobeillustrator className="text-7xl text-amber-500" />
+                    <SiPhpmyadmin className="text-7xl text-orange-500" />
                 </motion.div>
                 <motion.div
                     variants={iconVariants(4)}
