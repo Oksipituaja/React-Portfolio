@@ -5,10 +5,13 @@ import { useNavigate } from "react-router-dom";
 import RaffstoreUi from "../assets/Projects/Raffstore-E-Commerce.png";
 import Preview from "../assets/Projects/Preview.png";
 import RedesignSteamDashboard from "../assets/Projects/Redesign-dashboard.png";
+import CloudFinance from "../assets/Projects/Cloud-Finance.png";
+
 
 const UIUXDesigner = () => {
   const [selectedProject, setSelectedProject] = useState(null);
   const navigate = useNavigate();
+
   const projects = [
     {
       title: "UI/UX Design for RaffStore Online Electronics Store",
@@ -23,23 +26,20 @@ const UIUXDesigner = () => {
       liveUrl: "https://www.behance.net/gallery/221539787/Redesign-Steam-Dashboard",
     },
     {
-      title: "Kebunku Mobile App",
-      description: "Just tried my hand at making the Kebunku Landing page Mobile app. Focused on user-friendly experience. Project On Going.",
-      image: Preview,
-      liveUrl: "",
+      title: "CloudFinance: Modern Personal Finance Dashboard",
+      description: "Designing the dashboard for CloudFinance to make money management simpler. Focused on delivering absolute clarity through clean data visualization and a seamless user experience.",
+      image: CloudFinance,
+      liveUrl: "https://www.behance.net/gallery/245459713/CloudFinance-Modern-Personal-Finance-Dashboard",
     },
   ];
 
   return (
     <div className="overflow-x-hidden text-neutral-300 antialiased selection:bg-cyan-300 selection:text-cyan-900">
-      {/* Background Gradasi */}
       <div className="fixed top-0 -z-10 h-full w-full">
         <div className="absolute top-0 z-[-2] h-screen w-screen bg-neutral-950 [background:radial-gradient(145%_145%_at_50%_10%,#000_55%,#22d3ee_100%)]"></div>
       </div>
 
-      {/* Kontainer Utama */}
       <div className="container mx-auto px-8">
-        {/* Navbar */}
         <nav className="mb-20 flex items-center justify-between py-6">
           <motion.div
             initial={{ x: -120, opacity: 0 }}
@@ -55,42 +55,22 @@ const UIUXDesigner = () => {
             transition={{ duration: 1 }}
             className="flex items-center justify-center gap-4 text-3xl"
           >
-            <a
-              href="https://www.linkedin.com/in/yusuf-hammam-a1a0a21a3/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:scale-150 transition-transform duration-500"
-            >
+            <a href="https://www.linkedin.com/in/yusuf-hammam-a1a0a21a3/" target="_blank" rel="noopener noreferrer" className="hover:scale-150 transition-transform duration-500">
               <FaLinkedin />
             </a>
-            <a
-              href="https://github.com/Oksipituaja"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:scale-150 transition-transform duration-500"
-            >
+            <a href="https://github.com/Oksipituaja" target="_blank" rel="noopener noreferrer" className="hover:scale-150 transition-transform duration-500">
               <FaGithub />
             </a>
-            <a
-              href="https://www.instagram.com/yusuf.hammam"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:scale-150 transition-transform duration-500"
-            >
+            <a href="https://www.instagram.com/yusuf.hammam" target="_blank" rel="noopener noreferrer" className="hover:scale-150 transition-transform duration-500">
               <FaInstagram />
             </a>
           </motion.div>
         </nav>
 
-        {/* Portfolio Section */}
         <section className="pt-12 pb-20">
           <div className="max-w-xl mx-auto text-center mb-20">
-            <h4 className="text-cyan-400 text-2xl font-semibold tracking-wider uppercase mb-2">
-              Portfolio
-            </h4>
-            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
-              UI Designer Projects
-            </h2>
+            <h4 className="text-cyan-400 text-2xl font-semibold tracking-wider uppercase mb-2">Portfolio</h4>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">UI Designer Projects</h2>
             <p className="text-lg text-gray-400">
               Koleksi karya UI/UX Designer terbaru yang saya buat. Klik gambar untuk melihat detail.
             </p>
@@ -98,78 +78,89 @@ const UIUXDesigner = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project, i) => (
-              <div
+              <motion.div
                 key={i}
                 onClick={() => setSelectedProject(project)}
-                className="cursor-pointer bg-gray-900 rounded-2xl border border-gray-700 hover:shadow-cyan-500/20 transition-shadow flex flex-col"
+                whileHover={{ y: -6, boxShadow: "0 0 30px rgba(34,211,238,0.15)" }}
+                transition={{ duration: 0.3 }}
+                className="cursor-pointer bg-gray-900 rounded-2xl border border-gray-700 flex flex-col overflow-hidden"
               >
-                <div className="overflow-hidden rounded-t-2xl relative">
+                <div className="overflow-hidden">
                   {project.image ? (
-                    <div className="aspect-w-4 aspect-h-3 md:aspect-w-3 md:aspect-h-2 lg:aspect-w-4 lg:aspect-h-3">
-                      <img
-                        src={project.image}
-                        alt={project.title}
-                        className="w-full h-80 object-cover hover:scale-105 transition-transform duration-300"
-                      />
-                    </div>
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-52 object-cover hover:scale-105 transition-transform duration-300"
+                    />
                   ) : (
-                    <div className="w-full h-60 flex items-center justify-center bg-gray-800 text-gray-500">
+                    <div className="w-full h-52 flex items-center justify-center bg-gray-800 text-gray-500">
                       Tidak tersedia
                     </div>
                   )}
                 </div>
-                <div className="p-5 flex-grow">
-                  <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-                  <p className="text-sm text-gray-400 max-w-lg">{project.description}</p>
+                <div className="p-5 flex flex-col gap-2">
+                  <h3 className="text-base font-semibold text-white line-clamp-2">{project.title}</h3>
+                  <p className="text-sm text-gray-400 line-clamp-2">{project.description}</p>
+                  <span className="text-xs text-cyan-400 mt-1">Klik untuk detail</span>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
 
           <AnimatePresence>
             {selectedProject && (
               <motion.div
-                className="fixed inset-0 bg-black/90 z-50 overflow-y-auto p-6 md:p-10"
+                className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 md:p-10"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 onClick={() => setSelectedProject(null)}
               >
                 <motion.div
-                  className="max-w-5xl w-full mx-auto relative"
-                  initial={{ scale: 0.95, opacity: 0 }}
-                  animate={{ scale: 1, opacity: 1 }}
-                  exit={{ scale: 0.95, opacity: 0 }}
+                  className="bg-gray-900 border border-gray-700 rounded-2xl max-w-3xl w-full overflow-hidden relative"
+                  initial={{ scale: 0.9, opacity: 0, y: 40 }}
+                  animate={{ scale: 1, opacity: 1, y: 0 }}
+                  exit={{ scale: 0.9, opacity: 0, y: 40 }}
+                  transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
                   onClick={(e) => e.stopPropagation()}
                 >
+                  <button
+                    onClick={() => setSelectedProject(null)}
+                    className="absolute top-3 right-4 text-gray-400 hover:text-white text-3xl z-10 leading-none"
+                  >
+                    X
+                  </button>
+
                   {selectedProject.image && (
-                    <a
-                      href={selectedProject.liveUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={selectedProject.liveUrl ? "cursor-pointer" : "cursor-default"}
-                    >
+                    <div className="overflow-hidden">
                       <img
                         src={selectedProject.image}
                         alt={selectedProject.title}
-                        className="w-full rounded-xl border border-gray-700 mb-6"
+                        className="w-full max-h-80 object-cover"
                       />
-                    </a>
+                    </div>
                   )}
-                  <div className="text-white">
-                    <h2 className="text-2xl md:text-3xl font-semibold mb-2">
+
+                  <div className="p-6">
+                    <h2 className="text-xl md:text-2xl font-bold text-white mb-3">
                       {selectedProject.title}
                     </h2>
-                    <p className="text-gray-400 mb-6 text-sm md:text-base">
+                    <p className="text-gray-400 text-sm md:text-base leading-relaxed mb-6">
                       {selectedProject.description}
                     </p>
+                    {selectedProject.liveUrl ? (
+                      <a
+                        href={selectedProject.liveUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 bg-cyan-500 hover:bg-cyan-600 text-white font-medium py-2.5 px-6 rounded-xl transition duration-300 text-sm"
+                      >
+                        Lihat Project
+                      </a>
+                    ) : (
+                      <span className="text-sm text-gray-500 italic">Work in progress.</span>
+                    )}
                   </div>
-                  <button
-                    onClick={() => setSelectedProject(null)}
-                    className="absolute top-4 right-4 text-white text-3xl hover:text-cyan-400"
-                  >
-                    ×
-                  </button>
                 </motion.div>
               </motion.div>
             )}
@@ -180,7 +171,7 @@ const UIUXDesigner = () => {
               onClick={() => navigate("/")}
               className="bg-cyan-500 hover:bg-cyan-600 text-white font-medium py-3 px-8 rounded-2xl transition duration-300"
             >
-              ← Kembali ke Beranda
+              Kembali ke Beranda
             </button>
           </div>
         </section>
