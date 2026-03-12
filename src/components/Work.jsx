@@ -55,7 +55,7 @@ const Work = () => {
                   <div className="group-hover:bg-black/70 w-full h-full absolute z-40 transition-all duration-300"></div>
                   <img className="w-full group-hover:scale-125 transition-all duration-500" src={FrontendDev} alt="img" />
                   <div className="absolute -bottom-full left-7 lg:left-12 group-hover:bottom-24 transition-all duration-500 z-50">
-                    <span className="text-gradient ">Frontend Developer</span>
+                    <span className="text-gradient ">Fullstack Developer</span>
                   </div>
                   <div className="absolute -bottom-full left-6 lg:left-12 group-hover:bottom-14 transition-all duration-700 z-50">
                     <span className="text-2xl lg:text-3xl text-white">Web Developer</span>

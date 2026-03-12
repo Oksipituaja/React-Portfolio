@@ -30,9 +30,10 @@ const Hero = () => {
   return (
     <main className="max-w-7xl mx-auto px-6 pt-10 pb-12 md:pb-24 relative overflow-hidden" id='hero'>
       
+      {/* Judul */}
       <motion.h1 
+        whileInView={{ y: 0, opacity: 1, scale: 1 }}
         initial={{ y: 60, opacity: 0, scale: 0.95 }}
-        animate={{ y: 0, opacity: 1, scale: 1 }}
         transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
         className="text-center text-5xl md:text-[110px] font-black tracking-tighter text-white leading-tight md:leading-none mt-10 mb-6 md:mb-10 relative z-20"
       >
@@ -41,10 +42,10 @@ const Hero = () => {
 
       <div className="flex flex-col lg:flex-row items-center justify-between pb-10 border-b border-neutral-800 relative mt-4 md:mt-16 gap-10 md:gap-0">
         
-        {/* Kolom Kiri: geser dari kiri */}
+        {/* Kolom Kiri */}
         <motion.div 
+          whileInView={{ x: 0, opacity: 1 }}
           initial={{ x: -120, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.9, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
           whileHover={{ y: -4, transition: { duration: 0.3 } }}
           className="w-full md:w-1/3 relative z-20 flex justify-center md:justify-end md:pr-10 order-2 md:order-1"
@@ -72,13 +73,14 @@ const Hero = () => {
           </div>
         </motion.div>
 
-        {/* Kolom Tengah: foto masuk dari bawah, NO bounce/floating */}
+        {/* Kolom Tengah */}
         <div className="w-full lg:w-1/3 flex justify-center relative z-10 h-[350px] md:h-[500px] order-1 md:order-2">
           <div className="relative w-full h-full flex justify-center items-end">
             
+            {/* Lingkaran gradasi */}
             <motion.div 
+              whileInView={{ scale: 1, opacity: 1, rotate: 0 }}
               initial={{ scale: 0, opacity: 0, rotate: -15 }}
-              animate={{ scale: 1, opacity: 1, rotate: 0 }}
               transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
               className="absolute 
                 bottom-4 w-[250px] h-[250px] 
@@ -88,15 +90,11 @@ const Hero = () => {
                 [mask-image:linear-gradient(to_bottom,black_45%,transparent_90%)]"
             />
             
-            {/* ✅ DIUBAH: hapus repeat/floating, cukup masuk sekali dari bawah */}
+            {/* Foto */}
             <motion.img 
+              whileInView={{ y: 0, opacity: 1 }}
               initial={{ y: 120, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ 
-                duration: 1,
-                delay: 0.5,
-                ease: [0.22, 1, 0.36, 1]
-              }}
+              transition={{ duration: 1, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
               src="src/assets/YusufProfile2.png" 
               alt="YusufProfile" 
               className="relative z-10 
@@ -109,11 +107,11 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* ✅ DIUBAH: Social Links geser dari kanan */}
+        {/* Social Links */}
         <motion.div 
           variants={containerVariants}
           initial="hidden"
-          animate="visible"
+          whileInView="visible"
           className="w-full lg:w-1/3 flex flex-wrap md:flex-col justify-center items-center md:items-start md:pl-16 gap-3 md:gap-4 relative z-20 order-3"
         >
           {[
