@@ -3,6 +3,7 @@ import { ArrowUpRight, FileBadge, Instagram, Palette } from 'lucide-react';
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { FaGithub } from 'react-icons/fa6';
+import YusufProfile from "../assets/YusufProfile2.png";
 
 const Hero = () => {
   const navigate = useNavigate();
@@ -95,7 +96,7 @@ const Hero = () => {
               whileInView={{ y: 0, opacity: 1 }}
               initial={{ y: 120, opacity: 0 }}
               transition={{ duration: 1, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
-              src="src/assets/YusufProfile2.png" 
+              src={YusufProfile} 
               alt="YusufProfile" 
               className="relative z-10 
                 w-[280px] md:w-auto md:max-w-[500px] 
