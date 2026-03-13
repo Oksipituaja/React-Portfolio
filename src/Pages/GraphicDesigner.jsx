@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
+import { FaGithub, FaInstagram } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import AeroStreetHoops from "../assets/Projects/Aerostreet-Hoops.png";
 import DynamicShoesCampaign from "../assets/Projects/Shoes-Design-Graphic.png";
@@ -16,7 +16,7 @@ const GraphicDesigner = () => {
 
   const projects = [
     {
-      title: "Bold, Modern, and Dynamic A Shoes Campaign Concept🔥",
+      title: "Bold, Modern, and Dynamic A Shoes Campaign Concept",
       description:
         "Exploring a bold and modern design approach with dynamic elements and strong typography. This project showcases various poster designs and social media visuals. Expect to see vibrant colors and impactful layouts.",
       image: DynamicShoesCampaign,
@@ -101,12 +101,12 @@ const GraphicDesigner = () => {
             className="flex items-center justify-center gap-4 text-3xl"
           >
             <a
-              href="https://www.linkedin.com/in/yusuf-hammam-a1a0a21a3/"
+              href="https://www.behance.net/yusufhammam"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:scale-150 transition-transform duration-500"
             >
-              <FaLinkedin />
+              <FaBehance />
             </a>
             <a
               href="https://github.com/Oksipituaja"

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://yusuf-hammam-portfolio.vercel.app/sitemap.xml

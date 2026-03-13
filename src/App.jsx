@@ -10,7 +10,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Primary />} />
         <Route path="/UI-UX-Designer" element={<UIUXDesigner />} />
-        <Route path="/Frontend-Developer" element={<FrontendDeveloper />} />
+        <Route path="/FullStack-Developer" element={<FrontendDeveloper />} />
         <Route path="/Graphic-Designer" element={<GraphicDesigner />} />
         <Route path="*" element={<NotFound404 />} />
       </Routes>

@@ -2,7 +2,7 @@ import React from 'react';
 import { ArrowUpRight, FileBadge, Instagram, Palette } from 'lucide-react';
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import { FaGithub } from 'react-icons/fa6';
+import { FaBehance, FaGithub } from 'react-icons/fa6';
 import YusufProfile from "../assets/YusufProfile2.png";
 
 const Hero = () => {
@@ -119,7 +119,7 @@ const Hero = () => {
             { icon: <FileBadge size={18} />, text: "About CV", link: "https://yusuf-hammam-portfolio.vercel.app/CV_YUSUF_HAMMAM.pdf" },
             { icon: <Instagram size={18} />, text: "Instagram", link: "https://www.instagram.com/yusuf.hammam" },
             { icon: <FaGithub size={18} />, text: "Github", link: "https://github.com/oksipituaja" },
-            { icon: <Palette size={18} />, text: "Behance", link: "https://www.behance.net/yusufhammam" },
+            { icon: <FaBehance size={18} />, text: "Behance", link: "https://www.behance.net/yusufhammam" },
           ].map((item, index) => (
             <motion.a
               key={index}

@@ -46,7 +46,7 @@ const Work = () => {
 
                 {/* CARD 2 Frontend Developer */}
                 <motion.div
-                  onClick={() => navigate("/Frontend-Developer")}
+                  onClick={() => navigate("/FullStack-Developer")}
                   whileInView={{ opacity: 1, x: 0 }}
                   initial={{ opacity: 0, x: -350 }}
                   transition={{ duration: 1.5 }}
