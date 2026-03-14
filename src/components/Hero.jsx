@@ -36,7 +36,7 @@ const Hero = () => {
         whileInView={{ y: 0, opacity: 1, scale: 1 }}
         initial={{ y: 60, opacity: 0, scale: 0.95 }}
         transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-        className="text-center text-5xl md:text-[110px] font-black tracking-tighter text-white leading-tight md:leading-none mt-10 mb-6 md:mb-10 relative z-20"
+        className="text-center text-5xl md:text-[110px] font-black tracking-normal text-white leading-tight md:leading-none mt-10 mb-6 md:mb-10 relative z-20"
       >
         YUSUF HAMMAM
       </motion.h1>
