@@ -161,31 +161,12 @@ const Contact = () => {
             <div className="text-center tracking-tighter mt-10">
                 <motion.p
                     whileInView={{ opacity: 1, x: 0, y: 20 }}
-                    initial={{ opacity: 0, x: -100 }}
-                    transition={{ duration: 1 }}
+                    initial={{ opacity: 0, y: -50 }}
+                    transition={{ duration: 2.5 }}
                     className="my-4"
                 >
-                    {CONTACT.address}
+                    2025 © Oksipituaja, All Right Reserved.
                 </motion.p>
-                <motion.p
-                    whileInView={{ opacity: 1, x: 0, y: 10 }}
-                    initial={{ opacity: 0, x: -100 }}
-                    transition={{ duration: 1 }}
-                    className="my-4"
-                ><a href="https://wa.me/6289674962244?text=Halo%21%20Saya%20tertarik%20dengan%20jasa%20pembuatan%20website%2C%20UI%2FUX%20design%2C%20atau%20graphic%20design%20dari%20Anda.%20Bisa%20info%20lebih%20lanjut%3F%20%F0%9F%9A%80">
-                    {CONTACT.phoneNo}
-                </a>
-                </motion.p>
-                <a href={`mailto:${CONTACT.email}`}>
-                    <motion.button
-                        whileInView={{ opacity: 1, y: 0 }}
-                        initial={{ opacity: 0, y: 80 }}
-                        transition={{ duration: 0.5 }}
-                        className="text-xl underline text-sky-500"
-                    >
-                        {CONTACT.email}
-                    </motion.button>
-                </a>
             </div>
         </div>
     );
