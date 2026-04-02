@@ -8,6 +8,7 @@ import todoListAppPrev from "../assets/Projects/ToDoListApp-Prev.png";
 import calculatorJsPrev from "../assets/Projects/Calculatorjs-prev.png";
 import pawsAdvisorPrev from "../assets/Projects/PawsAdvisor-Prev.png";
 import preview from "../assets/Projects/Preview.png";
+import MulyoAbadiWeb from "../assets/Projects/MulyoAbadiWorkpaintWeb.png";
 
 const FrontendDeveloper = () => {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -50,11 +51,11 @@ const FrontendDeveloper = () => {
       liveUrl: "",
     },
     {
-      title: "Website Repaint",
-      tech: "E-Commerce Concept",
-      description: "Konsep platform jasa repaint sepatu dengan sistem pemesanan online. (Work in Progress)",
-      image: preview,
-      liveUrl: "",
+      title: "Mulyo Abadi WorkPaint Company Profile",
+      tech: "React",
+      description: "Konsep platform jasa repaint motor dengan sistem pemesanan online.",
+      image: MulyoAbadiWeb,
+      liveUrl: "https://www.mulyoabadiworkpaint.com/",
     },
   ];
 
