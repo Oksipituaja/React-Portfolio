@@ -57,7 +57,7 @@ const FrontendDeveloper = () => {
       tech: "React",
       description: "Konsep platform jasa repaint motor dengan sistem pemesanan online.",
       image: MulyoAbadiWeb,
-      liveUrl: "https://www.mulyoabadiworkpaint.com/",
+      liveUrl: "https://mulyoabadiworkpaint.com",
     },
   ];
 
